@@ -1,0 +1,20 @@
+.welcomeScreen {
+    height: 100vh;
+    background: linear-gradient(-45deg, #053154, #330e0e00);
+}
+.welcomeImage {
+    margin-top: 30vh;
+    width: 40vh;
+    height: 40vh;
+}
+.leftWelcome {
+    height: 100vh
+}
+
+.rightWelcome {
+    height: 100vh;
+}
+
+.marginSet {
+    margin-top: 25vh;
+}

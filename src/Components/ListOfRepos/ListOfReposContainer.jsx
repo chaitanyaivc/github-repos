@@ -1,19 +1,15 @@
-import React, {Component} from 'react';
 import ListOfReposComponent from "./ListOfReposComponent";
 import {bindActionCreators} from "redux";
 import {connect} from 'react-redux';
 import {getDataFromGit} from '../../redux/actions';
-import mainContentViewReducer from "../../redux/main-content-view/main-content-view-reducer";
 
 const mapStateToProps = (state) => {
-    console.log('data watch: ', state.dataFromGit);
     let dataFromGit = state.dataFromGit;
     let enteredKey = state.searchReposByTitleReducer;
     let favouriteRepos = state.favouriteReposReducer;
     let allOrFavs = state.updateDropDownReducer;
     let dataProcessedToDisplay = null;
     if (allOrFavs === 'All') {
-        console.log('data entered is: ', enteredKey);
         if (enteredKey.searchKey && dataFromGit) {
             dataProcessedToDisplay = dataFromGit.filter(val => val.name.toLowerCase()
                 .includes(enteredKey.searchKey.toLowerCase()))
@@ -27,6 +23,7 @@ const mapStateToProps = (state) => {
         searchKeyEntered: state.searchReposByTitleReducer,
         favouriteRepos: state.favouriteReposReducer,
         updatedDropDown: state.updateDropDownReducer,
+        userName: state.getUserNameReducer,
         dataProcessedToDisplay,
         mainContentViewReducer: state.mainContentViewReducer
     }

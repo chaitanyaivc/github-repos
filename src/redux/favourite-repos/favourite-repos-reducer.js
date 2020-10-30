@@ -4,7 +4,6 @@ const initialState = [];
 const favouriteReposReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_FAVOURITE_REPOS: {
-            console.log('repos: ', action.payload.repoDetails);
             let filterFavs = state.filter(val => val.name === action.payload.repoDetails.name);
             if (filterFavs.length === 0) {
                 action.payload.repoDetails.addedToFav = true;

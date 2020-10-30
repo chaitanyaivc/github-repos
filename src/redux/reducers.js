@@ -4,10 +4,12 @@ import favouriteReposReducer from './favourite-repos/favourite-repos-reducer';
 import updateDropDownReducer from './change-header-dropdown/change-header-dropdown-reducer';
 import dataFromGit from './fetch-data-from-git/fetch-data-from-git-reducer';
 import mainContentViewReducer from './main-content-view/main-content-view-reducer';
+import getUserNameReducer from "./get-name-of-git-user/get-name-of-git-user-reducer";
 export default combineReducers({
     searchReposByTitleReducer,
     favouriteReposReducer,
     updateDropDownReducer,
     dataFromGit,
-    mainContentViewReducer
+    mainContentViewReducer,
+    getUserNameReducer
 })

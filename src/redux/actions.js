@@ -5,3 +5,4 @@ export {changeHeaderDropDown} from './change-header-dropdown/change-header-dropd
 export {getDataFromGit} from './fetch-data-from-git/fetch-data-from-git-action';
 export {enableMainContent} from './main-content-view/enable-main-content-view-action';
 export {disableMainContent} from './main-content-view/disable-main-content-view-action';
+export {getUserNameAction} from './get-name-of-git-user/get-name-of-git-user-action';

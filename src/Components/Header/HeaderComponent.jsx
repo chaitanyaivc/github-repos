@@ -6,8 +6,6 @@ import {
     NavbarToggler,
     NavbarBrand,
     Nav,
-    NavItem,
-    NavLink,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
@@ -16,8 +14,6 @@ import {
     InputGroup,
     Input
 } from 'reactstrap';
-import connect from "react-redux";
-import {searchReposByTitleAction} from "../../redux/SearchReposByTitle/search-repos-by-title-action";
 import './HeaderComponent.css';
 
 class HeaderComponent extends Component {

@@ -2,19 +2,22 @@ import React, {Component} from 'react';
 // import { Row } from 'reactstrap';
 
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, Row, Container, Col, CardHeader
+    Card,
+    CardImg,
+    CardText,
+    CardBody,
+    CardTitle,
+    Button,
+    Row,
+    Container,
+    Col,
+    CardHeader
 } from 'reactstrap';
 import './ContributorsComponent.css';
-import {disableMainContent} from "../../redux/main-content-view/disable-main-content-view-action";
 
 class ContributorsComponent extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         const {dataOfARepo} = this.props;
-        console.log('data of a repo: ', dataOfARepo);
         return(
             <Container className='contributorsComponent'>
                 <Card>

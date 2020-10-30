@@ -1,4 +1,3 @@
-import React, {Component} from 'react';
 import HeaderComponent from "./HeaderComponent";
 import {bindActionCreators} from "redux";
 import {connect} from 'react-redux';

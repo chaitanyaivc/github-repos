@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import {
     Card,
     CardText,
@@ -8,12 +8,6 @@ import {
     Col,
     ButtonGroup
 } from 'reactstrap';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
 import './RepositoryComponent.css';
 
 class RepositoryComponent extends Component {
@@ -23,7 +17,6 @@ class RepositoryComponent extends Component {
     }
 
     handleClick = (event) => {
-        console.log('clicked: ', event.target.name);
         let addOrRemove = event.target.name;
         if (addOrRemove === 'add') {
             this.props.addFavouriteRepos(this.props.repoData);
@@ -36,7 +29,6 @@ class RepositoryComponent extends Component {
 
     render() {
         const {name, description, addedToFav} = this.props.repoData;
-        // console.log('clicker: ', this.handleClick);
         return(
             <Col md={4}>
                 <Card className='cardBox'>

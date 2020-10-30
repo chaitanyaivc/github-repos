@@ -1,4 +1,3 @@
-import React, {Component} from 'react';
 import RepositoryComponent from "./RepositoryComponent";
 import {bindActionCreators} from "redux";
 import {connect} from 'react-redux';
