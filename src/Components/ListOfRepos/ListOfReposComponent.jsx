@@ -5,6 +5,9 @@ import { Container, Row } from 'reactstrap';
 import './ListOfReposComponent.css';
 import RepositoryContainer from "../Repository/RepositoryContainer";
 import getDataFromGit from "../../redux/fetch-data-from-git/fetch-data-from-git-action";
+import mainContentViewReducer from "../../redux/main-content-view/main-content-view-reducer";
+import {Redirect} from "react-router";
+import ContributorsContainer from "../contributors/ContributorsContainer";
 
 class ListOfReposComponent extends Component {
     constructor(props) {
@@ -33,21 +36,24 @@ class ListOfReposComponent extends Component {
     }
 
     render() {
-        let { dataProcessedToDisplay } = this.props;
+        let { dataProcessedToDisplay, mainContentViewReducer } = this.props;
         console.log('entered key is: ', dataProcessedToDisplay);
         return(
             <Container className='containerClass' fluid={true}>
-                <Row>
-                {
-                    dataProcessedToDisplay !== null ?
-                        dataProcessedToDisplay.map((val,ind) => <RepositoryContainer
-                            repoData={val}
-                            index={ind}
-                        />)
-                    :
-                    null
+                {!mainContentViewReducer.display ?
+                    <Row>
+                        {
+                            dataProcessedToDisplay !== null ?
+                                dataProcessedToDisplay.map((val, ind) => <RepositoryContainer
+                                    repoData={val}
+                                    index={ind}
+                                />)
+                                :
+                                null
+                        }
+                    </Row>:
+                    <ContributorsContainer/>
                 }
-                </Row>
             </Container>
         )
     }

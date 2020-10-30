@@ -1,0 +1,23 @@
+.avatarImage{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 6rem;
+}
+.contributorsComponent {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.contributorCardTitle {
+    border: 2px solid brown;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+/*.containerClass {
+    height: 100vh;
+}*/
+.contributorCardRow {
+    margin-top: 1rem;
+}

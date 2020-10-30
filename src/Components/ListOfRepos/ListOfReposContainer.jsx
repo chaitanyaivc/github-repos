@@ -3,6 +3,7 @@ import ListOfReposComponent from "./ListOfReposComponent";
 import {bindActionCreators} from "redux";
 import {connect} from 'react-redux';
 import {getDataFromGit} from '../../redux/actions';
+import mainContentViewReducer from "../../redux/main-content-view/main-content-view-reducer";
 
 const mapStateToProps = (state) => {
     console.log('data watch: ', state.dataFromGit);
@@ -26,7 +27,8 @@ const mapStateToProps = (state) => {
         searchKeyEntered: state.searchReposByTitleReducer,
         favouriteRepos: state.favouriteReposReducer,
         updatedDropDown: state.updateDropDownReducer,
-        dataProcessedToDisplay
+        dataProcessedToDisplay,
+        mainContentViewReducer: state.mainContentViewReducer
     }
 }
 

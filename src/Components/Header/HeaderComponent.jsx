@@ -18,7 +18,7 @@ import {
 } from 'reactstrap';
 import connect from "react-redux";
 import {searchReposByTitleAction} from "../../redux/SearchReposByTitle/search-repos-by-title-action";
-
+import './HeaderComponent.css';
 
 class HeaderComponent extends Component {
     constructor(props) {
@@ -58,11 +58,9 @@ class HeaderComponent extends Component {
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
-                            <NavItem>
-                                <NavLink href="#">Home</NavLink>
-                            </NavItem>
                             <InputGroup>
                                 <Input
+                                    className='searchBox'
                                     placeholder='Search repos by title'
                                     onChange={this.searchRepoByTitle}
                                 />

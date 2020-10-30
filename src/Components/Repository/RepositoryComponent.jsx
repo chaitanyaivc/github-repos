@@ -8,6 +8,12 @@ import {
     Col,
     ButtonGroup
 } from 'reactstrap';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 import './RepositoryComponent.css';
 
 class RepositoryComponent extends Component {
@@ -23,6 +29,8 @@ class RepositoryComponent extends Component {
             this.props.addFavouriteRepos(this.props.repoData);
         } else if (addOrRemove === 'remove') {
             this.props.removeFavouriteRepos(this.props.repoData);
+        } else {
+            this.props.enableMainContent(this.props.repoData);
         }
     }
 
