@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/github-repos/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/github-repos/static/js/main.cac04509.chunk.js",
+    "main.js.map": "/github-repos/static/js/main.cac04509.chunk.js.map",
+    "runtime-main.js": "/github-repos/static/js/runtime-main.1a7c1242.js",
+    "runtime-main.js.map": "/github-repos/static/js/runtime-main.1a7c1242.js.map",
+    "static/js/2.34b22fc1.chunk.js": "/github-repos/static/js/2.34b22fc1.chunk.js",
+    "static/js/2.34b22fc1.chunk.js.map": "/github-repos/static/js/2.34b22fc1.chunk.js.map",
+    "static/js/3.d6b984be.chunk.js": "/github-repos/static/js/3.d6b984be.chunk.js",
+    "static/js/3.d6b984be.chunk.js.map": "/github-repos/static/js/3.d6b984be.chunk.js.map",
+    "index.html": "/github-repos/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/github-repos/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.34b22fc1.chunk.js.LICENSE.txt": "/github-repos/static/js/2.34b22fc1.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/github-repos/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a7c1242.js",
+    "static/js/2.34b22fc1.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.cac04509.chunk.js"
+  ]
+}
