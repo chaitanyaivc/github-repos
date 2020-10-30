@@ -3,7 +3,6 @@ import ListOfReposComponent from "./ListOfReposComponent";
 import {bindActionCreators} from "redux";
 import {connect} from 'react-redux';
 import {getDataFromGit} from '../../redux/actions';
-import dataFromGit from "../../redux/fetch-data-from-git/fetch-data-from-git-reducer";
 
 const mapStateToProps = (state) => {
     console.log('data watch: ', state.dataFromGit);

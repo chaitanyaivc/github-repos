@@ -16,13 +16,18 @@ class RepositoryComponent extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick = () => {
-        console.log('clicked');
-        this.props.addFavouriteRepos(this.props.repoData);
+    handleClick = (event) => {
+        console.log('clicked: ', event.target.name);
+        let addOrRemove = event.target.name;
+        if (addOrRemove === 'add') {
+            this.props.addFavouriteRepos(this.props.repoData);
+        } else if (addOrRemove === 'remove') {
+            this.props.removeFavouriteRepos(this.props.repoData);
+        }
     }
 
     render() {
-        const {name, description} = this.props.repoData;
+        const {name, description, addedToFav} = this.props.repoData;
         // console.log('clicker: ', this.handleClick);
         return(
             <Col md={4}>
@@ -33,8 +38,19 @@ class RepositoryComponent extends Component {
                         {/*<CardSubtitle>Card subtitle</CardSubtitle>*/}
                         <CardText>{description? description : 'No description available for this repo.'}</CardText>
                         <ButtonGroup>
-                            <Button color='primary' onClick={this.handleClick}>Open</Button>
-                            <Button color='success' onClick={this.handleClick}>Add to favourites</Button>
+                            <Button
+                                color='primary'
+                                onClick={this.handleClick}
+                            >
+                                Open
+                            </Button>
+                            <Button
+                                color={addedToFav ? 'danger' : 'success'}
+                                onClick={this.handleClick}
+                                name={addedToFav ? 'remove' : 'add'}
+                            >
+                                {addedToFav ? 'Remove from favourites' : 'Add to favourites'}
+                            </Button>
                         </ButtonGroup>
                     </CardBody>
                 </Card>

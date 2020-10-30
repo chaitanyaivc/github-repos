@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import RepositoryComponent from "./RepositoryComponent";
 import {bindActionCreators} from "redux";
 import {connect} from 'react-redux';
-import {addFavouriteRepos} from '../../redux/actions';
+import {addFavouriteRepos, removeFavouriteRepos} from '../../redux/actions';
 
 const mapStateToProps = (state) => {
     return {
@@ -12,7 +12,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
-        addFavouriteRepos
+        addFavouriteRepos,
+        removeFavouriteRepos
     }, dispatch);
 }
 

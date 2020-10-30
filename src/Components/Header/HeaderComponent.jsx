@@ -35,7 +35,7 @@ class HeaderComponent extends Component {
 
     toggle = () => {
         this.setState({
-            isOpen: this.state.isOpen
+            isOpen: !this.state.isOpen
         })
     }
 
@@ -54,13 +54,19 @@ class HeaderComponent extends Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/">reactstrap</NavbarBrand>
+                    <NavbarBrand href="/">GitHub</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                                <NavLink href="#">Home</NavLink>
                             </NavItem>
+                            <InputGroup>
+                                <Input
+                                    placeholder='Search repos by title'
+                                    onChange={this.searchRepoByTitle}
+                                />
+                            </InputGroup>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     {this.props.updatedDropDown}
@@ -74,12 +80,6 @@ class HeaderComponent extends Component {
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
-                            <InputGroup>
-                                <Input
-                                    placeholder='Search repos by title'
-                                    onChange={this.searchRepoByTitle}
-                                />
-                            </InputGroup>
                         </Nav>
                         <NavbarText>Simple Text</NavbarText>
                     </Collapse>
