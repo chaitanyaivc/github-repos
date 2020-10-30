@@ -1,30 +1,40 @@
 import React, {Component, Fragment} from 'react';
 import {
-    InputGroup,
-    InputGroupAddon,
-    InputGroupText,
-    Input,Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button,
-    Row,
+    Card,
+    CardText,
+    CardBody,
+    CardTitle,
+    Button,
     Col,
     ButtonGroup
 } from 'reactstrap';
 import './RepositoryComponent.css';
 
 class RepositoryComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick = () => {
+        console.log('clicked');
+        this.props.addFavouriteRepos(this.props.repoData);
+    }
+
     render() {
         const {name, description} = this.props.repoData;
+        // console.log('clicker: ', this.handleClick);
         return(
             <Col md={4}>
                 <Card className='cardBox'>
                     {/*<CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />*/}
                     <CardBody>
                         <CardTitle>{name}</CardTitle>
-                        <CardSubtitle>Card subtitle</CardSubtitle>
+                        {/*<CardSubtitle>Card subtitle</CardSubtitle>*/}
                         <CardText>{description? description : 'No description available for this repo.'}</CardText>
                         <ButtonGroup>
-                            <Button color='primary'>Open</Button>
-                            <Button color='success'>Add to favourites</Button>
+                            <Button color='primary' onClick={this.handleClick}>Open</Button>
+                            <Button color='success' onClick={this.handleClick}>Add to favourites</Button>
                         </ButtonGroup>
                     </CardBody>
                 </Card>

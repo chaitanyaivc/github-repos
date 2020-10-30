@@ -14,21 +14,23 @@ import {
     DropdownItem,
     NavbarText,
     InputGroup,
-    InputGroupAddon,
-    InputGroupText,
     Input
 } from 'reactstrap';
 import connect from "react-redux";
+import {searchReposByTitleAction} from "../../redux/SearchReposByTitle/search-repos-by-title-action";
+
 
 class HeaderComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
             isOpen: false,
-            headerDropdownValue: 'All'
+            headerDropdownValue: 'All',
+            titleSearchKeyWord: ''
         }
         this.toggle = this.toggle.bind(this);
         this.changeHeaderDropDown = this.changeHeaderDropDown.bind(this);
+        this.searchRepoByTitle = this.searchRepoByTitle.bind(this);
     }
 
     toggle = () => {
@@ -38,9 +40,14 @@ class HeaderComponent extends Component {
     }
 
     changeHeaderDropDown = (event) => {
-        this.setState({
+        /*this.setState({
             headerDropdownValue: event.target.className
-        })
+        })*/
+        this.props.changeHeaderDropDown(event.target.className);
+    }
+
+    searchRepoByTitle = (event) => {
+        this.props.searchReposByTitleAction(event.target.value);
     }
 
     render() {
@@ -56,7 +63,7 @@ class HeaderComponent extends Component {
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
-                                    {this.state.headerDropdownValue}
+                                    {this.props.updatedDropDown}
                                 </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
@@ -68,10 +75,10 @@ class HeaderComponent extends Component {
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                             <InputGroup>
-                                <InputGroupAddon addonType="prepend">
-                                    <InputGroupText>@</InputGroupText>
-                                </InputGroupAddon>
-                                <Input placeholder='Search repos' />
+                                <Input
+                                    placeholder='Search repos by title'
+                                    onChange={this.searchRepoByTitle}
+                                />
                             </InputGroup>
                         </Nav>
                         <NavbarText>Simple Text</NavbarText>
