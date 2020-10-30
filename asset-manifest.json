@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/github-repos/static/css/main.b81e95a8.chunk.css",
-    "main.js": "/github-repos/static/js/main.218de49f.chunk.js",
-    "main.js.map": "/github-repos/static/js/main.218de49f.chunk.js.map",
+    "main.css": "/github-repos/static/css/main.710af159.chunk.css",
+    "main.js": "/github-repos/static/js/main.7a6628fb.chunk.js",
+    "main.js.map": "/github-repos/static/js/main.7a6628fb.chunk.js.map",
     "runtime-main.js": "/github-repos/static/js/runtime-main.5730a0e8.js",
     "runtime-main.js.map": "/github-repos/static/js/runtime-main.5730a0e8.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/github-repos/static/css/2.20aa2d7b.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.bc040e5d.chunk.js.map": "/github-repos/static/js/3.bc040e5d.chunk.js.map",
     "index.html": "/github-repos/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/github-repos/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.b81e95a8.chunk.css.map": "/github-repos/static/css/main.b81e95a8.chunk.css.map",
+    "static/css/main.710af159.chunk.css.map": "/github-repos/static/css/main.710af159.chunk.css.map",
     "static/js/2.8ff00670.chunk.js.LICENSE.txt": "/github-repos/static/js/2.8ff00670.chunk.js.LICENSE.txt",
     "static/media/logo.103b5fa1.svg": "/github-repos/static/media/logo.103b5fa1.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.5730a0e8.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.8ff00670.chunk.js",
-    "static/css/main.b81e95a8.chunk.css",
-    "static/js/main.218de49f.chunk.js"
+    "static/css/main.710af159.chunk.css",
+    "static/js/main.7a6628fb.chunk.js"
   ]
 }
