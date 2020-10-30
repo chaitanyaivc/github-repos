@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, InputGroup, Input } from 'reactstrap';
 import './WelcomeScreen.css';
+import {getUserNameAction} from "../../redux/get-name-of-git-user/get-name-of-git-user-action";
 
 class WelcomeScreen extends Component {
     constructor(props) {
@@ -21,6 +22,7 @@ class WelcomeScreen extends Component {
 
     handleSubmit = () => {
         this.props.getDataFromGit(this.state.userName);
+        this.props.getUserNameAction(this.state.userName);
     }
 
     render() {

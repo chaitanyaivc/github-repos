@@ -9,7 +9,8 @@ import {
 const mapStateToProps = (state) => {
     return {
         searchKeyEntered: state.searchReposByTitleReducer,
-        updatedDropDown: state.updateDropDownReducer
+        updatedDropDown: state.updateDropDownReducer,
+        userName: state.getUserNameReducer.userName
     }
 }
 

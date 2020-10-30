@@ -75,7 +75,7 @@ class HeaderComponent extends Component {
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                         </Nav>
-                        <NavbarText>Simple Text</NavbarText>
+                        <NavbarText>{this.props.userName}</NavbarText>
                     </Collapse>
                 </Navbar>
             </div>
