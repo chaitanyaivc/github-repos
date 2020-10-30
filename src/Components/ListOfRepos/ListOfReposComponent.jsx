@@ -22,29 +22,14 @@ class ListOfReposComponent extends Component {
     render() {
         let { repositoryData } = this.state;
         return(
-            <Container fluid={true}>
+            <Container className='containerClass' fluid={true}>
                 <Row>
                 {
                     repositoryData !== null ?
-                            /*<Table className='reposList'>
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>S.No</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>*/
-                                // {
-                                    repositoryData.map((val,ind) => <RepositoryComponent
-                                        repoData={val}
-                                        index={ind}
-                                    />)
-                                // }
-                                /*</tbody>
-                            </Table>*/
+                        repositoryData.map((val,ind) => <RepositoryComponent
+                            repoData={val}
+                            index={ind}
+                        />)
                     :
                     null
                 }

@@ -21,7 +21,7 @@ class RepositoryComponent extends Component {
                     <CardBody>
                         <CardTitle>{name}</CardTitle>
                         <CardSubtitle>Card subtitle</CardSubtitle>
-                        <CardText>{description}</CardText>
+                        <CardText>{description? description : 'No description available for this repo.'}</CardText>
                         <ButtonGroup>
                             <Button color='primary'>Open</Button>
                             <Button color='success'>Add to favourites</Button>

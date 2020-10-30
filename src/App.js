@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from "./Components/Header";
+import HeaderComponent from "./Components/Header/HeaderComponent";
 import ListOfReposComponent from "./Components/ListOfRepos/ListOfReposComponent";
 import React from "react";
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <HeaderComponent/>
       <ListOfReposComponent/>
     </div>
   );

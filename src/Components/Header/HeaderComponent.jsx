@@ -20,18 +20,26 @@ import {
 } from 'reactstrap';
 import connect from "react-redux";
 
-class Header extends Component {
+class HeaderComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false
+            isOpen: false,
+            headerDropdownValue: 'All'
         }
         this.toggle = this.toggle.bind(this);
+        this.changeHeaderDropDown = this.changeHeaderDropDown.bind(this);
     }
 
     toggle = () => {
         this.setState({
             isOpen: this.state.isOpen
+        })
+    }
+
+    changeHeaderDropDown = (event) => {
+        this.setState({
+            headerDropdownValue: event.target.className
         })
     }
 
@@ -44,25 +52,18 @@ class Header extends Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
-                            </NavItem>
-                            <NavItem>
                                 <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
-                                    Options
+                                    {this.state.headerDropdownValue}
                                 </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
-                                        Option 1
+                                        <div onClick={this.changeHeaderDropDown} className='All'>All</div>
                                     </DropdownItem>
                                     <DropdownItem>
-                                        Option 2
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        Reset
+                                        <div onClick={this.changeHeaderDropDown} className='Favourites'>Favourites</div>
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
@@ -80,4 +81,4 @@ class Header extends Component {
         );
     }
 }
-export default Header;
+export default HeaderComponent;
